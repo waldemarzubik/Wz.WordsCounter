@@ -10,7 +10,10 @@ namespace Wz.WordsCounter.Wpf
 {
     public class ViewModelLocator
     {
-        public IMainViewModel MainViewModel => ServiceLocator.Current.GetInstance<IMainViewModel>();
+        public IMainViewModel MainViewModel
+        {
+            get { return ServiceLocator.Current.GetInstance<IMainViewModel>(); }
+        } 
 
         public ViewModelLocator()
         {

@@ -19,7 +19,10 @@ namespace Wz.WordsCounter.Wpf.Behaviours
         private static void OnIsOnpropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var behaviour = d as VisualStateSwitchBehaviour;
-            behaviour?.SetVisibility((bool) e.NewValue);
+            if (behaviour != null)
+            {
+                behaviour.SetVisibility((bool) e.NewValue);
+            }
         }
 
         protected override void OnAttached()

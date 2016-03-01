@@ -11,10 +11,6 @@ namespace Wz.WordsCounter.Logic.Models
 
         public WordsCounterModel(ISentenceValidator sentenceValidator)
         {
-            if (sentenceValidator == null)
-            {
-                throw new AggregateException($"Missing {nameof(ISentenceValidator)}");
-            }
             _sentenceValidator = sentenceValidator;
         }
 
